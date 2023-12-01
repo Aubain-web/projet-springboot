@@ -1,6 +1,7 @@
 package com.example.demospringnextu.services;
 
 import com.example.demospringnextu.models.Student;
+import com.example.demospringnextu.models.StudentGroup;
 import com.example.demospringnextu.repositories.StudentRepository;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -31,5 +32,10 @@ public class StudentService {
 
     public List<Student> getStudentWithMailDomain(String mailDomain) {
         return studentRepository.findAllByMailEndsWith(mailDomain);
+    }
+
+    public List<Student> getStudentByStudentGroupId(Integer studentGroupId) {
+        final StudentGroup studentGroup = StudentGroup.builder().studentGroupId(studentGroupId).build();
+        return studentRepository.findAllByStudentGroup(studentGroup);
     }
 }

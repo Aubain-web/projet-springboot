@@ -1,6 +1,7 @@
 package com.example.demospringnextu.repositories;
 
 import com.example.demospringnextu.models.Student;
+import com.example.demospringnextu.models.StudentGroup;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,4 +15,6 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
     List<Student> findAllByAgeLessThan(Integer age);
 
     List<Student> findAllByMailEndsWith(String mailDomain);
+
+    List<Student> findAllByStudentGroup(StudentGroup studentGroup);
 }

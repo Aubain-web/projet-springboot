@@ -1,7 +1,6 @@
 package com.example.demospringnextu.controllers;
 
 import com.example.demospringnextu.models.Student;
-import com.example.demospringnextu.models.StudentGroup;
 import com.example.demospringnextu.services.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,6 +41,11 @@ public class StudentController {
         return studentService.getStudentWithMailDomain(mailDomain);
     }
 
+    @GetMapping("/by_student_group/{studentGroupId}")
+    public List<Student> getStudentByStudentGroupId(@PathVariable("studentGroupId") Integer studentGroupId) {
+        return studentService.getStudentByStudentGroupId(studentGroupId);
+    }
+
     // TODO
     // Ajouter les professeurs : un professeur est relié à une école, une école a plusieurs professeurs
     // Un professeur a un id, un nom, un prenom, un mail et une matière (type String) et donne des cours
@@ -67,6 +71,6 @@ public class StudentController {
 
     // Mon mail : florian@jetdev.fr
     // Mon Discord : jetflo
-    
+
     // TODO : à rendre avant le lundi 11 Décembre à 13h
 }
