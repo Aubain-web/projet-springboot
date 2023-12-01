@@ -42,5 +42,31 @@ public class StudentController {
         return studentService.getStudentWithMailDomain(mailDomain);
     }
 
+    // TODO
+    // Ajouter les professeurs : un professeur est relié à une école, une école a plusieurs professeurs
+    // Un professeur a un id, un nom, un prenom, un mail et une matière (type String) et donne des cours
 
+    // Ajouter un cours: qui a un nom et une durée
+    // Un cours est relié à un groupe d'étudiants
+    // Chaque cours est dispensé par un professeur
+
+    // Faire un service qui remonte tous les professeurs
+    // Faire un service qui remonte un professeur par id
+    // Faire un service qui remonte les professeurs n'ayant qu'une chaine de caractères dans leur nom
+
+    // Aide: pour cours et professeurs je souhaite voir:
+    // Une classe Cours / Une classe Professeur
+    // Un service chacun
+    // Forcément un repo chacun
+    // Et por remonter les infos du professeur, un controleur
+
+    // BONUS: Faire un service qui remonte tous les cours pour un groupe d'étudiants donné
+
+    // MEGA BONUS: Où stockons nous les notes des étudiants à un cours ?
+    // Faire un service pour insérer la note d'un étudiant à un cours
+
+    // Mon mail : florian@jetdev.fr
+    // Mon Discord : jetflo
+    
+    // TODO : à rendre avant le lundi 11 Décembre à 13h
 }
