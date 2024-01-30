@@ -1,7 +1,6 @@
 package com.example.demospringnextu.models;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,6 +12,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Collection;
 
 @Data
 @NoArgsConstructor
@@ -39,4 +40,10 @@ public class Student {
     private StudentGroup studentGroup;
 
     private Integer age;
+
+
+   /* public Collection<? extends Cours> getCours() {
+        String name;
+        return null;
+    }*/
 }
